@@ -31,7 +31,7 @@
       "name": "Custom Search Redirect",
       "keyword": "customsearch",
       "search_url": "https://www.startpage.com/do/search?q={searchTerms}",
-      "suggest_url": "https://www.google.com/complete/search?client=firefox&q={searchTerms}",
+      "suggest_url": "https://suggestqueries.google.com/complete/search?client=firefox&hl=en&gl=us&q={searchTerms}",
       "encoding": "UTF-8",
       "favicon_url": "https://www.startpage.com/favicon.ico",
       "is_default": true

@@ -9,7 +9,7 @@ A browser extension that gives you control over your search engine, allowing you
 
 This WebExtension empowers you to choose your search engine from a clean, simple dashboard. Instead of being locked into a single choice, you can switch between Startpage, DuckDuckGo, Brave Search, Ecosia, and PrivacyWall with a single click.
 
-The extension uses Startpage as its base search provider and Google's suggestion API for address-bar suggestions. When a query is submitted, the extension redirects the Startpage request to the selected provider. The Chromium version uses Manifest V3's `declarativeNetRequest` API for this redirect.
+The extension uses Google's suggestion API for address-bar suggestions. When a query is submitted, it is sent through Startpage as the Chromium handoff URL and then redirected to the selected provider. The Chromium version uses Manifest V3's `declarativeNetRequest` API for this redirect. Chromium does not allow an unpacked extension to change the installed search provider URL dynamically, so a brief handoff through Startpage is expected when another provider is selected.
 
 ## Features
 
@@ -40,7 +40,7 @@ The extension uses Startpage as its base search provider and Google's suggestion
 2.  Open the browser's extensions page (`brave://extensions`, `chrome://extensions`, or the equivalent).
 3.  Enable **Developer mode**.
 4.  Click **Load unpacked** and select the `chrome` directory.
-5.  If the browser asks to add or change the search provider, approve it. The extension uses Google for suggestions and Startpage as the internal submission URL; the selected private provider receives the final search.
+5.  If the browser asks to add or change the search provider, approve it. The extension uses Google for suggestions and Startpage as the internal handoff URL; the selected private provider receives the final search.
 
 ## How to Use
 
