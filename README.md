@@ -42,6 +42,8 @@ The Firefox build provides Google suggestions through Firefox's search-provider 
 4.  Click **Load unpacked** and select the `chrome` directory.
 5.  Keep **Google** selected as the browser's default search engine. The extension uses Google's native omnibox and redirects submitted Google searches to the selected private provider.
 
+> **Important:** Chromium extensions cannot read or change the browser's default search provider. If Brave Search, Bing, or another provider is selected, this extension cannot receive Google's native omnibox queries or suggestions. Set Google as the browser default for this extension to work as intended.
+
 ## How to Use
 
 1.  Click the extension's icon in the Firefox toolbar.

@@ -33,6 +33,24 @@ body {
     color: #957fef;
 }
 
+.notice {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 12px;
+    padding: 9px 10px;
+    border: 1px solid #d6a94f;
+    border-radius: 5px;
+    background-color: #fff3cd;
+    color: #5c4812;
+    font-size: 11px;
+    line-height: 1.35;
+}
+
+.notice strong {
+    font-size: 12px;
+}
+
 .engine-list {
     display: flex;
     flex-direction: column;
