@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "All-in-One Custom Search",
-  "version": "2.0",
+  "version": "2.1",
   "description": "Allows you to switch your default search engine (Startpage, DuckDuckGo, Brave, Ecosia, PrivacyWall) via a simple dashboard.",
   "icons": {
     "16": "icons/icon16.png",
@@ -24,17 +24,6 @@
     "storage"
   ],
   "host_permissions": [
-    "https://www.startpage.com/*"
-  ],
-  "chrome_settings_overrides": {
-    "search_provider": {
-      "name": "Custom Search Redirect",
-      "keyword": "customsearch",
-      "search_url": "https://www.startpage.com/do/search?q={searchTerms}",
-      "suggest_url": "https://suggestqueries.google.com/complete/search?client=firefox&hl=en&gl=us&q={searchTerms}",
-      "encoding": "UTF-8",
-      "favicon_url": "https://www.startpage.com/favicon.ico",
-      "is_default": true
-    }
-  }
+    "https://www.google.com/*"
+  ]
 }

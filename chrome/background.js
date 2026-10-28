@@ -7,7 +7,7 @@ const searchEngines = {
 };
 
 const redirectRuleId = 1;
-const baseSearchUrl = "https://www.startpage.com/do/search";
+const googleSearchUrlPattern = "^https://www\\.google\\.com/search\\?(?:[^#]*&)?q=([^&]*)";
 
 function getRedirectRule(engine) {
     return {
@@ -20,7 +20,7 @@ function getRedirectRule(engine) {
             }
         },
         condition: {
-            regexFilter: "^https://www\\.startpage\\.com/do/search\\?q=([^&]*)",
+            regexFilter: googleSearchUrlPattern,
             resourceTypes: ["main_frame"]
         }
     };
@@ -29,7 +29,7 @@ function getRedirectRule(engine) {
 async function updateRedirectRule(engine) {
     await chrome.declarativeNetRequest.updateDynamicRules({
         removeRuleIds: [redirectRuleId],
-        addRules: engine === "startpage" ? [] : [getRedirectRule(engine)]
+        addRules: [getRedirectRule(engine)]
     });
 }
 
