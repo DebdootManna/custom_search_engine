@@ -33,7 +33,6 @@
       "search_url": "https://www.startpage.com/do/search?q={searchTerms}",
       "suggest_url": "https://www.google.com/complete/search?client=firefox&q={searchTerms}",
       "encoding": "UTF-8",
-      "favicon_url": "icons/icon32.png",
       "is_default": true
     }
   }
