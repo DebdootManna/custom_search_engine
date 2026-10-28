@@ -3,7 +3,7 @@ const searchEngines = {
     duckduckgo: "https://duckduckgo.com/?q=",
     brave: "https://search.brave.com/search?q=",
     ecosia: "https://www.ecosia.org/search?q=",
-    privacywall: "https://www.privacywall.org/search?q="
+    privacywall: "https://www.privacywall.org/search/secure?t=pwm&q="
 };
 
 const redirectRuleId = 1;
