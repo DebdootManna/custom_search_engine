@@ -1,17 +1,17 @@
 # All-in-One Custom Search Extension
 
-This project contains the source code for a single, unified Firefox WebExtension that allows users to switch between multiple privacy-focused search engines.
+This project contains Firefox and Chromium WebExtension builds that allow users to switch between multiple privacy-focused search engines.
 
 ## Features
 
 - **Interactive Dashboard**: A simple popup dashboard allows you to choose your preferred search engine at any time. The UI has been styled for a modern look and feel.
-- **Supported Engines**: Startpage, DuckDuckGo, Brave Search, and PrivacyWall.
+- **Supported Engines**: Startpage, DuckDuckGo, Brave Search, Ecosia, and PrivacyWall.
 - **Seamless Redirection**: The extension intercepts search queries and redirects them to your selected search engine.
 - **Google Suggestions**: Continues to use Google's search suggestion API for a consistent experience.
 
 ## How It Works
 
-This extension uses the `webRequest` API to achieve its functionality.
+The Firefox build uses the `webRequest` API, while the Chromium build uses Manifest V3's `declarativeNetRequest` API.
 
 1.  A base search engine (Startpage) is declared in the `manifest.json`.
 2.  When you perform a search, the extension's background script intercepts the outgoing request to this base engine.

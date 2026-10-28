@@ -7,14 +7,14 @@ A browser extension that gives you control over your search engine, allowing you
 
 ## Description
 
-This WebExtension empowers you to choose your search engine from a clean, simple dashboard. Instead of being locked into a single choice, you can switch between Startpage, DuckDuckGo, Brave Search, and PrivacyWall with a single click.
+This WebExtension empowers you to choose your search engine from a clean, simple dashboard. Instead of being locked into a single choice, you can switch between Startpage, DuckDuckGo, Brave Search, Ecosia, and PrivacyWall with a single click.
 
-The Firefox version uses Firefox's search-provider override and redirects queries to your preferred provider, while maintaining search suggestions from Google. The Chromium version uses Manifest V3's `declarativeNetRequest` API to redirect searches sent to Startpage.
+The extension uses Startpage as its base search provider and Google's suggestion API for address-bar suggestions. When a query is submitted, the extension redirects the Startpage request to the selected provider. The Chromium version uses Manifest V3's `declarativeNetRequest` API for this redirect.
 
 ## Features
 
 - **One-Click Switching**: Change your default search engine instantly from the extension's popup.
-- **Privacy-Focused**: Includes support for Startpage, DuckDuckGo, Brave, and PrivacyWall.
+- **Privacy-Focused**: Includes support for Startpage, DuckDuckGo, Brave, Ecosia, and PrivacyWall.
 - **Seamless Integration**: Works automatically in the background.
 - **Search Suggestions**: Leverages Google's powerful search suggestions.
 - **Lightweight & Modern UI**: A simple and beautiful dashboard.
@@ -40,7 +40,7 @@ The Firefox version uses Firefox's search-provider override and redirects querie
 2.  Open the browser's extensions page (`brave://extensions`, `chrome://extensions`, or the equivalent).
 3.  Enable **Developer mode**.
 4.  Click **Load unpacked** and select the `chrome` directory.
-5.  Configure the browser's search provider to Startpage if you want address-bar searches to be redirected. Chromium does not allow regular extensions to programmatically replace the default search provider, so the extension can only redirect searches that are sent to its Startpage URL.
+5.  If the browser asks to add or change the search provider, approve it. The extension uses Google for suggestions and Startpage as the internal submission URL; the selected private provider receives the final search.
 
 ## How to Use
 

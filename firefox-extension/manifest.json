@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "All-in-One Custom Search",
   "version": "2.0",
-  "description": "Allows you to switch your default search engine (Startpage, DuckDuckGo, Brave, PrivacyWall) via a simple dashboard.",
+  "description": "Allows you to switch your default search engine (Startpage, DuckDuckGo, Brave, Ecosia, PrivacyWall) via a simple dashboard.",
   "browser_specific_settings": {
     "gecko": {
       "id": "custom-search-engine@DebdootManna",
